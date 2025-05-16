@@ -19,7 +19,7 @@ WINDOW_HEIGHT = SCREEN_HEIGHT
 INDEX_HTML   = os.path.abspath("index.html")
 CREDITO_HTML = os.path.abspath("cartao-de-credito/pagamento-credito.html")
 
-# Converte para formato Unix (/) e monta URLs file:///
+# Converte para formato Unix (/) 
 index_url   = "file:///" + INDEX_HTML.replace("\\", "/")
 credito_url = "file:///" + CREDITO_HTML.replace("\\", "/")
 
@@ -27,8 +27,7 @@ credito_url = "file:///" + CREDITO_HTML.replace("\\", "/")
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-# opcional: para rodar em modo normal, não headless
-# chrome_options.add_argument("--headless")  # só use se quiser rodar sem abrir janela
+
 
 # Inicializando o Chrome com opções
 driver = webdriver.Chrome(
