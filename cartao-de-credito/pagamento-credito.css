@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+
+body {
+    background-color: #303030;
+    margin: 0;
+    padding-bottom: 70px; /* espaço para barra inferior fixa */
+}
+
+.painel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 310px;
+}
+
+.painel img {
+    width: 100%;
+}
+
+.botao-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    width: 130px;
+}
+
+.botao-voltar img {
+    width: 100%;
+    display: block;
+}
+
+.texto-voltar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: sans-serif;
+    pointer-events: none;
+    text-decoration: none;
+}
+
+.marca {
+    position: absolute;
+    right: 5%;
+    top: 10px;
+    font-family: 'Rubik Doodle Shadow', cursive;
+    font-size: 3.5rem;
+    margin: 0;
+    color: #000;
+}
+
+.informacao {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15%;
+    color: white;
+    align-items: flex-start;
+    padding: 0 30px;
+}
+
+#info-pagamento {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 10px;
+    color: white;
+    padding-right: 10%;
+}
+
+.btn-pagamento {
+    background-color: #c2185b;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin-right: 13%;
+}
+
+.informacao h2 {
+    font-size: 1.3rem;
+    margin-left: -1%;
+    font-family: 'Mitr';
+}
+
+.escolha {
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-left: 1.5%;
+    margin-top: -6%;
+    position: fixed;
+}
+
+.escolha h1 {
+    font-size: 20px;
+}
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.radio-tamanho {
+    transform: scale(1.2);
+}
+
+.ingresso {
+    position: absolute;
+    top: 24%;
+    left: 62vw;
+    width: 37%;
+    z-index: 10;
+}
+
+.barra-inferior {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 99%;
+    height: 30px;
+    background-color: #161616;
+    z-index: 1000;
+    font-size: 14px;
+    padding: 12px 10px;
+}
+
+
+
+.linha {
+    border-bottom: 1px solid gray;
+    width: 15vw;
+    margin-bottom: 2vh;
+}
+
+.dados {
+    display: block;
+    margin-bottom: 1%;
+    font-size: 1rem;
+    color: #F9F9F9;
+    margin-left: 1px;
+}
+
+.coluna-esquerda {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.coluna-esquerda h2 {
+    margin-bottom: 20px;
+}
+
+.input-com-icone {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    background-color: transparent;
+}
+
+.input-com-icone input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: smaller;
+}
+
+.input-com-icone i {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.texto {
+    margin-top: 10px;
+    color: white;
+    font-size: 14px;
+    max-width: 600px;
+}
+
+.coluna-esquerda input {
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    color: #ffffff;
+}
+
+.total-ingresso {
+    font-size: small;
+    color: white;
+    margin-top: 10px;
+}
+
+.total-ingresso .valor {
+    background: linear-gradient(to right, #c9184a, #a20636);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-left: 6px;
+}
+
+.coluna-direita {
+    flex: 1;
+    padding: 1%;
+    font-family: 'Mitr';
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .informacao {
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 10px;
+    }
+
+    .coluna-esquerda,
+    .coluna-direita {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ingresso {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .painel {
+        height: auto;
+    }
+
+    .botao-voltar {
+        width: 90px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .texto-voltar {
+        font-size: 14px;
+    }
+
+    .marca {
+        font-size: 2rem;
+        right: 10px;
+        top: 10px;
+    }
+
+    .input-com-icone {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .input-com-icone input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .input-com-icone i {
+        font-size: 1rem;
+        padding-top: 5px;
+    }
+
+    .opcao {
+        font-size: 14px;
+    }
+
+    .total-ingresso .valor {
+        font-size: 14px;
+        padding: 4px 10px;
+        border-radius: 15px;
+    }
+
+    .linha {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .escolha {
+        margin-left: 0;
+        margin-top: 20px;
+        position: static;
+    }
+}
+
+/* POPUP */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.613);
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #e0fff0;
+    border: 3px solid #00aa66;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5%;
+}
+
+.status-box {
+    background-color: #33cc66;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    margin-top: 15px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.status-box .icon {
+    font-size: 24px;
+}
+
+.ver-recibo {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.btn-finalizar {
+    padding: 10px 25px;
+    background: linear-gradient(to right, #cc0033, #99001a);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-finalizar:hover {
+    background: linear-gradient(to right, #99001a, #660011);
+}
