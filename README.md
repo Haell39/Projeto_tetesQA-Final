@@ -37,7 +37,6 @@ Este projeto tem como objetivo testar automaticamente a funcionalidade de pagame
 
 O teste automatizado preenche os campos do cartão de crédito, seleciona o parcelamento e finaliza o pagamento.
 
-## 🎥 Demonstração
 
 [![Demonstração do Teste Automatizado](https://img.youtube.com/vi/Z6_9cnbA_2g/0.jpg)](https://youtu.be/Z6_9cnbA_2g)
 
